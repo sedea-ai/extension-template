@@ -2,6 +2,12 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "npm: ci",
+      "type": "shell",
+      "command": "npm ci",
+      "problemMatcher": []
+    },
+    {
       "type": "npm",
       "script": "compile",
       "group": {
@@ -30,6 +36,14 @@
       "script": "typecheck",
       "label": "npm: typecheck",
       "problemMatcher": "$tsc"
+    },
+    {
+      "label": "npm: ci + compile",
+      "dependsOn": [
+        "npm: ci",
+        "npm: compile"
+      ],
+      "dependsOrder": "sequence"
     }
   ]
 }
