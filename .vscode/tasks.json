@@ -36,14 +36,6 @@
       "script": "typecheck",
       "label": "npm: typecheck",
       "problemMatcher": "$tsc"
-    },
-    {
-      "label": "npm: ci + compile",
-      "dependsOn": [
-        "npm: ci",
-        "npm: compile"
-      ],
-      "dependsOrder": "sequence"
     }
   ]
 }

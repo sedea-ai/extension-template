@@ -28,6 +28,7 @@
     "@execution-flows/flow-compose": "0.3.0"
   },
   "scripts": {
+    "prepare": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "lint": "eslint src webview-src .storybook",

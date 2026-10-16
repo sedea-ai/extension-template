@@ -8,6 +8,13 @@ Generate a new project from this template (GitHub **Use this template** or `gh r
 2. Run `npm ci && npm run verify`.
 3. Read **`AGENTS.md`** for Storybook, EDH smoke, and MCP contribution guidance.
 
+## Development activation
+
+- `out/extension.js` is gitignored and is not committed to the repository.
+- `npm ci` compiles the extension through its `prepare` script and produces TypeScript output only; it does not build the webview.
+- The **Run Extension** launch configuration runs `npm ci` before launching the extension.
+- After editing TypeScript source, run `npm run compile` to refresh the extension output.
+
 ## What v0.1 includes
 
 - TypeScript extension shell with compile / lint / typecheck / test scripts
